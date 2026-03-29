@@ -1,0 +1,22 @@
+{
+  "active_trade": true,
+  "symbol": "COSUSDT",
+  "role": "PRIMARY",
+  "entry_px": 0.0014609999970965936,
+  "qty": 34442.299999999996,
+  "invested_usdt": 50.3202637745,
+  "max_px": 0.0014609999970965936,
+  "trades_closed": 0,
+  "wins": 0,
+  "losses": 0,
+  "consecutive_sl": 0,
+  "initial_equity": 52.96869871,
+  "peak_equity": 52.96869871,
+  "current_mdd": 1.19906160934267,
+  "kill_switch": false,
+  "kill_reason": "",
+  "entry_signal_candle_open_time": "1774656000000",
+  "last_entry_signal_open_time_by_symbol": {
+    "COSUSDT": "1774656000000"
+  }
+}
