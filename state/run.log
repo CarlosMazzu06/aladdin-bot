@@ -22342,3 +22342,45 @@ Traceback (most recent call last):
     raise HTTPError(req.full_url, code, msg, hdrs, fp)
 urllib.error.HTTPError: HTTP Error 451: 
 
+[2026-04-22 06:16:31 UTC] ==================================================
+[2026-04-22 06:16:31 UTC] ALADDIN GITHUB ACTIONS — Ejecucion
+[2026-04-22 06:16:31 UTC] ==================================================
+CRASH[2026-04-22 06:16:31 UTC]:HTTP Error 451: 
+Traceback (most recent call last):
+  File "/home/runner/work/aladdin-bot/aladdin-bot/bot/aladdin_bot.py", line 284, in <module>
+    try: main()
+         ^^^^^^
+  File "/home/runner/work/aladdin-bot/aladdin-bot/bot/aladdin_bot.py", line 259, in main
+    state = load_state(); usdt = get_balance("USDT"); equity = current_equity(state, usdt)
+                                 ^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/aladdin-bot/aladdin-bot/bot/aladdin_bot.py", line 79, in get_balance
+    c, d = signed_get("/api/v3/account", {})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/aladdin-bot/aladdin-bot/bot/aladdin_bot.py", line 67, in signed_get
+    params = dict(params); params["timestamp"] = api_server_time(); params["recvWindow"] = 5000
+                                                 ^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/aladdin-bot/aladdin-bot/bot/aladdin_bot.py", line 58, in api_server_time
+    _, d = http_request(f"{BASE_URL}/api/v3/time")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/aladdin-bot/aladdin-bot/bot/aladdin_bot.py", line 49, in http_request
+    with urllib.request.urlopen(req, timeout=timeout, context=ctx) as resp:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.13/x64/lib/python3.12/urllib/request.py", line 215, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.13/x64/lib/python3.12/urllib/request.py", line 521, in open
+    response = meth(req, response)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.13/x64/lib/python3.12/urllib/request.py", line 630, in http_response
+    response = self.parent.error(
+               ^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.13/x64/lib/python3.12/urllib/request.py", line 559, in error
+    return self._call_chain(*args)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.13/x64/lib/python3.12/urllib/request.py", line 492, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.13/x64/lib/python3.12/urllib/request.py", line 639, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 451: 
+
