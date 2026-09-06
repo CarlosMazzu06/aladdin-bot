@@ -114712,3 +114712,47 @@ Traceback (most recent call last):
     raise HTTPError(req.full_url, code, msg, hdrs, fp)
 urllib.error.HTTPError: HTTP Error 451: 
 
+[2026-09-06 04:31:01 UTC] ==================================================
+[2026-09-06 04:31:01 UTC] ALADDIN GITHUB ACTIONS — Ejecucion
+[2026-09-06 04:31:01 UTC] ==================================================
+[2026-09-06 04:31:02 UTC]   USDT:$113.32|Eq:$113.32|Pos:FLAT
+[2026-09-06 04:31:03 UTC]   ENTRY: COSUSDT(ADX=25.1,RSI=2.1)|$107.65
+CRASH[2026-09-06 04:31:03 UTC]:HTTP Error 400: Bad Request
+Traceback (most recent call last):
+  File "/home/runner/work/aladdin-bot/aladdin-bot/bot/aladdin_bot.py", line 284, in <module>
+    try: main()
+         ^^^^^^
+  File "/home/runner/work/aladdin-bot/aladdin-bot/bot/aladdin_bot.py", line 275, in main
+    state = process_entry(state, usdt)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/aladdin-bot/aladdin-bot/bot/aladdin_bot.py", line 245, in process_entry
+    code, res = market_buy_quote(sym, spend)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/aladdin-bot/aladdin-bot/bot/aladdin_bot.py", line 99, in market_buy_quote
+    return signed_post("/api/v3/order", {"symbol": sym, "side": "BUY", "type": "MARKET", "quoteOrderQty": f"{q:.8f}"})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/aladdin-bot/aladdin-bot/bot/aladdin_bot.py", line 76, in signed_post
+    return http_post(url, headers={"X-MBX-APIKEY": API_KEY})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/aladdin-bot/aladdin-bot/bot/aladdin_bot.py", line 54, in http_post
+    with urllib.request.urlopen(req, timeout=timeout, context=ctx) as resp:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/urllib/request.py", line 215, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/urllib/request.py", line 521, in open
+    response = meth(req, response)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/urllib/request.py", line 630, in http_response
+    response = self.parent.error(
+               ^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/urllib/request.py", line 559, in error
+    return self._call_chain(*args)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/urllib/request.py", line 492, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/urllib/request.py", line 639, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 400: Bad Request
+
